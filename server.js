@@ -6,13 +6,7 @@ var {url}=require ( "./config/config");
 var app=express();
 
 // app.use(cors());
-app.use(
-    cors({
-      origin: "https://joyful-brioche-b72c79.netlify.app",
-      methods: "GET,POST,PUT,DELETE",
-    //   credentials: true, // If using cookies/auth
-    })
-  );
+app.use(cors({ origin: '*' }));
 app.listen(2025,function(){
     console.log("Server Started...");
 })
